@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -8,7 +9,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: "babel-loader"
             },
@@ -18,7 +19,7 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.css$/,
+                test: /\.(css|scss)$/,
                 use: ["style-loader", "css-loader"],
             },
           {
@@ -28,7 +29,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts', '.js', '.json', ".tsx"]
+        extensions: ['.ts', '.js', '.json', ".tsx", ".jsx"]
     },
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -38,5 +39,9 @@ module.exports = {
         template: "public/index.html",
         hash: true, // This is useful for cache busting
         filename: 'index.html'
-    })]
+    }), new webpack.HotModuleReplacementPlugin()],
+    devServer: {
+      contentBase: path.resolve(__dirname, './dist'),
+      hot: true,
+    }
 }

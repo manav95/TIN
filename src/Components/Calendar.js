@@ -12,8 +12,11 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 exports.__esModule = true;
-var react_1 = require("react");
+var react_1 = __importDefault(require("react"));
 var react_2 = require("react");
 var Calendar = /** @class */ (function (_super) {
     __extends(Calendar, _super);

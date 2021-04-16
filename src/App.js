@@ -12,17 +12,40 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 exports.__esModule = true;
-var react_1 = require("react");
+var React = __importStar(require("react"));
 require("./App.css");
-var Navbar_1 = require("./Components/Navbar");
-var ContactForm_1 = require("./Components/ContactForm");
-var Calendar_1 = require("./Components/Calendar");
-var Gallery_1 = require("./Components/Gallery");
-var AboutUs_1 = require("./Components/AboutUs");
-var Message_1 = require("./Components/Message");
-var message_1 = require("./message");
+var Navbar_1 = __importDefault(require("./Components/Navbar"));
+var ContactForm_1 = __importDefault(require("./Components/ContactForm"));
+var Calendar_1 = __importDefault(require("./Components/Calendar"));
+var Gallery_1 = __importDefault(require("./Components/Gallery"));
+var AboutUs_1 = __importDefault(require("./Components/AboutUs"));
+var Message_1 = __importDefault(require("./Components/Message"));
+var message_1 = __importDefault(require("./message"));
 var react_scroll_1 = require("react-scroll");
+var react_hot_loader_1 = require("react-hot-loader");
 var App = /** @class */ (function (_super) {
     __extends(App, _super);
     function App(props) {
@@ -36,14 +59,14 @@ var App = /** @class */ (function (_super) {
         react_scroll_1.animateScroll.scrollTo(20000);
     };
     App.prototype.render = function () {
-        return (react_1["default"].createElement("div", null,
-            react_1["default"].createElement(Navbar_1["default"], null),
-            react_1["default"].createElement(AboutUs_1["default"], { title: "About Us", id: "section1", onboard: this.onboard }),
-            react_1["default"].createElement(Calendar_1["default"], { title: "Calendar", dark: false, id: "section2" }),
-            react_1["default"].createElement(Message_1["default"], { title: "A Message from Gaia", subtitle: message_1["default"], id: "section3" }),
-            react_1["default"].createElement(Gallery_1["default"], { title: "Gallery", dark: false, id: "section4" }),
-            react_1["default"].createElement(ContactForm_1["default"], { title: "Join Us", dark: false, onboard: this.onboard, id: "section5", onboardEnabled: this.state.onboardEnabled })));
+        return (React.createElement("div", { className: "App" },
+            React.createElement(Navbar_1["default"], null),
+            React.createElement(AboutUs_1["default"], { title: "About Us", id: "section1", onboard: this.onboard }),
+            React.createElement(Calendar_1["default"], { title: "Calendar", dark: false, id: "section2" }),
+            React.createElement(Message_1["default"], { title: "A Message from Gaia", subtitle: message_1["default"], id: "section3" }),
+            React.createElement(Gallery_1["default"], { title: "Gallery", dark: false, id: "section4" }),
+            React.createElement(ContactForm_1["default"], { title: "Join Us", dark: false, onboard: this.onboard, id: "section5", onboardEnabled: this.state.onboardEnabled })));
     };
     return App;
-}(react_1.Component));
-exports["default"] = App;
+}(React.Component));
+exports["default"] = react_hot_loader_1.hot(module)(App);

@@ -1,27 +1,24 @@
-import * as React from 'react';
+import { Component } from 'react';
 import "./App.css";
-import Navbar from "./Components/Navbar";
-import ContactForm from "./Components/ContactForm";
-import Calendar from "./Components/Calendar";
-import Gallery from "./Components/Gallery"
-import AboutUs from "./Components/AboutUs"
-import Message from "./Components/Message"
+import Navbar from "./components/Navbar";
+import ContactForm from "./components/ContactForm";
+import Calendar from "./components/Calendar";
+import Gallery from "./components/Gallery"
+import AboutUs from "./components/AboutUs"
+import Message from "./components/Message"
 
 import message from './message';
 import { animateScroll as scroll } from "react-scroll";
 import { hot } from "react-hot-loader";
 
-interface AppProps {
-}
-
 interface AppState {
   onboardEnabled: boolean;
 }
 
-class App extends React.Component<AppProps, AppState> {
+class App extends Component<any, AppState> {
   state = {onboardEnabled: true};
   
-  constructor(props: AppProps) {
+  constructor(props: any) {
     super(props);
     this.onboard = this.onboard.bind(this)
   }
