@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -7,59 +6,44 @@ var __extends = (this && this.__extends) || (function () {
         return extendStatics(d, b);
     };
     return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
 };
-exports.__esModule = true;
-var react_1 = require("react");
-var react_scroll_1 = require("react-scroll");
-var React = __importStar(require("react"));
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { Component } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 var Navbar = /** @class */ (function (_super) {
     __extends(Navbar, _super);
     function Navbar() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.scrollToTop = function () {
-            react_scroll_1.animateScroll.scrollToTop();
+            scroll.scrollToTop();
         };
         return _this;
     }
     Navbar.prototype.render = function () {
-        return (React.createElement("nav", { className: "nav", id: "navbar" },
-            React.createElement("div", { className: "nav-content" },
-                React.createElement("img", { src: "../logo.jpg", className: "nav-logo", alt: "Logo", onClick: this.scrollToTop }),
-                React.createElement("ul", { className: "nav-items" },
-                    React.createElement("li", { className: "nav-item" },
-                        React.createElement(react_scroll_1.Link, { activeClass: "active", to: "section1", spy: true, smooth: true, offset: -70, duration: 500 }, "About Us")),
-                    React.createElement("li", { className: "nav-item" },
-                        React.createElement(react_scroll_1.Link, { activeClass: "active", to: "section2", spy: true, smooth: true, offset: -70, duration: 500 }, "Events")),
-                    React.createElement("li", { className: "nav-item" },
-                        React.createElement(react_scroll_1.Link, { activeClass: "active", to: "section3", spy: true, smooth: true, offset: -70, duration: 500 }, "A Message from Gaia")),
-                    React.createElement("li", { className: "nav-item" },
-                        React.createElement(react_scroll_1.Link, { activeClass: "active", to: "section4", spy: true, smooth: true, offset: -70, duration: 500 }, "Gallery")),
-                    React.createElement("li", { className: "nav-item" },
-                        React.createElement(react_scroll_1.Link, { activeClass: "active", to: "section5", spy: true, smooth: true, offset: -70, duration: 500 }, "Join Us"))))));
+        return (_jsx("nav", __assign({ className: "nav", id: "navbar" }, { children: _jsxs("div", __assign({ className: "nav-content" }, { children: [_jsx("img", { src: "../logo.jpg", className: "nav-logo", alt: "Logo", onClick: this.scrollToTop }, void 0),
+                    _jsxs("ul", __assign({ className: "nav-items" }, { children: [_jsx("li", __assign({ className: "nav-item" }, { children: _jsx(Link, __assign({ activeClass: "active", to: "section1", spy: true, smooth: true, offset: -70, duration: 500 }, { children: "About Us" }), void 0) }), void 0),
+                            _jsx("li", __assign({ className: "nav-item" }, { children: _jsx(Link, __assign({ activeClass: "active", to: "section2", spy: true, smooth: true, offset: -70, duration: 500 }, { children: "Events" }), void 0) }), void 0),
+                            _jsx("li", __assign({ className: "nav-item" }, { children: _jsx(Link, __assign({ activeClass: "active", to: "section3", spy: true, smooth: true, offset: -70, duration: 500 }, { children: "A Message from Gaia" }), void 0) }), void 0),
+                            _jsx("li", __assign({ className: "nav-item" }, { children: _jsx(Link, __assign({ activeClass: "active", to: "section4", spy: true, smooth: true, offset: -70, duration: 500 }, { children: "Gallery" }), void 0) }), void 0),
+                            _jsx("li", __assign({ className: "nav-item" }, { children: _jsx(Link, __assign({ activeClass: "active", to: "section5", spy: true, smooth: true, offset: -70, duration: 500 }, { children: "Join Us" }), void 0) }), void 0)] }), void 0)] }), void 0) }), void 0));
     };
     return Navbar;
-}(react_1.Component));
-exports["default"] = Navbar;
+}(Component));
+export default Navbar;

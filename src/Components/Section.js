@@ -26,15 +26,15 @@ var __assign = (this && this.__assign) || function () {
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { Component } from "react";
-var Message = /** @class */ (function (_super) {
-    __extends(Message, _super);
-    function Message() {
+var Section = /** @class */ (function (_super) {
+    __extends(Section, _super);
+    function Section() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Message.prototype.render = function () {
-        return (_jsx("div", __assign({ className: "section" }, { children: _jsxs("div", __assign({ className: "section-content", id: this.props.id }, { children: [_jsx("h1", __assign({ style: { color: 'white' } }, { children: this.props.title }), void 0),
+    Section.prototype.render = function () {
+        return (_jsx("div", __assign({ className: "section" + (this.props.dark ? " section-dark" : "") }, { children: _jsxs("div", __assign({ className: "section-content", id: this.props.id }, { children: [_jsx("h1", __assign({ style: { color: 'white' } }, { children: this.props.title }), void 0),
                     _jsx("p", { children: this.props.subtitle }, void 0)] }), void 0) }), void 0));
     };
-    return Message;
+    return Section;
 }(Component));
-export default Message;
+export default Section;

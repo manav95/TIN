@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel';
 
 interface GalleryProps {

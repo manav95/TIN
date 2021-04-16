@@ -1,15 +1,14 @@
 import { Component } from 'react';
-import "./App.css";
 import Navbar from "./components/Navbar";
 import ContactForm from "./components/ContactForm";
 import Calendar from "./components/Calendar";
 import Gallery from "./components/Gallery"
 import AboutUs from "./components/AboutUs"
 import Message from "./components/Message"
-
 import message from './message';
 import { animateScroll as scroll } from "react-scroll";
 import { hot } from "react-hot-loader";
+import "./App.css";
 
 interface AppState {
   onboardEnabled: boolean;

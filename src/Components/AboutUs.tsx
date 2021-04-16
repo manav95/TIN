@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { Component } from "react";

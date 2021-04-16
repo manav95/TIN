@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -7,50 +6,38 @@ var __extends = (this && this.__extends) || (function () {
         return extendStatics(d, b);
     };
     return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
 };
-exports.__esModule = true;
-var react_1 = __importStar(require("react"));
-var pure_react_carousel_1 = require("pure-react-carousel");
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { Component } from "react";
+import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel';
 var Gallery = /** @class */ (function (_super) {
     __extends(Gallery, _super);
     function Gallery() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Gallery.prototype.render = function () {
-        return (react_1["default"].createElement("div", { className: "section" + (this.props.dark ? " section-dark" : "") },
-            react_1["default"].createElement("div", { className: "section-content", id: this.props.id },
-                react_1["default"].createElement("h1", { style: { color: 'white' } }, this.props.title),
-                react_1["default"].createElement(pure_react_carousel_1.CarouselProvider, { naturalSlideWidth: 100, naturalSlideHeight: 45, totalSlides: 2, disableKeyboard: false, touchEnabled: true, dragEnabled: true },
-                    react_1["default"].createElement(pure_react_carousel_1.Slider, null,
-                        react_1["default"].createElement(pure_react_carousel_1.Slide, { index: 0 },
-                            react_1["default"].createElement("iframe", { title: "Slide", width: "560", height: "315", src: "https://www.youtube.com/embed/BryL-5A6ZEQ", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" })),
-                        react_1["default"].createElement(pure_react_carousel_1.Slide, { index: 1 },
-                            react_1["default"].createElement("iframe", { title: "SecSlide", width: "560", height: "315", src: "https://www.youtube.com/embed/49lh6yPoH_Y", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" }))),
-                    react_1["default"].createElement(pure_react_carousel_1.DotGroup, { className: 'dot-group' })))));
+        return (_jsx("div", __assign({ className: "section" + (this.props.dark ? " section-dark" : "") }, { children: _jsxs("div", __assign({ className: "section-content", id: this.props.id }, { children: [_jsx("h1", __assign({ style: { color: 'white' } }, { children: this.props.title }), void 0),
+                    _jsxs(CarouselProvider, __assign({ naturalSlideWidth: 100, naturalSlideHeight: 45, totalSlides: 2, disableKeyboard: false, touchEnabled: true, dragEnabled: true }, { children: [_jsxs(Slider, { children: [_jsx(Slide, __assign({ index: 0 }, { children: _jsx("iframe", { title: "Slide", width: "560", height: "315", src: "https://www.youtube.com/embed/BryL-5A6ZEQ", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" }, void 0) }), void 0),
+                                    _jsx(Slide, __assign({ index: 1 }, { children: _jsx("iframe", { title: "SecSlide", width: "560", height: "315", src: "https://www.youtube.com/embed/49lh6yPoH_Y", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" }, void 0) }), void 0)] }, void 0),
+                            _jsx(DotGroup, { className: 'dot-group' }, void 0)] }), void 0)] }), void 0) }), void 0));
     };
     return Gallery;
-}(react_1.Component));
-exports["default"] = Gallery;
+}(Component));
+export default Gallery;
