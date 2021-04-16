@@ -96,3 +96,25 @@
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
+
+.carouselDiv {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.buttonBack {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+}
+
+.buttonNext {
+  position: absolute;
+  top: 10%;
+  left: 105%;
+}
+
+.slider{
+  left: 0%;
+}
