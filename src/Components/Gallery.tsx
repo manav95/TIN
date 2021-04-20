@@ -1,5 +1,5 @@
-import { Component } from "react";
-import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel';
+import React, { Component } from "react";
+import { CarouselProvider, Slider, Slide, DotGroup, ButtonBack, ButtonNext } from 'pure-react-carousel';
 
 interface GalleryProps {
   title: string;
@@ -24,11 +24,15 @@ export default class Gallery extends Component<GalleryProps, GalleryState> {
             disableKeyboard={false}
             touchEnabled
             dragEnabled>
+            <div className='carouselDiv'>
             <Slider>
-              <Slide index={0}><iframe title="Slide" width="560" height="315" src="https://www.youtube.com/embed/BryL-5A6ZEQ" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></Slide>
-              <Slide index={1}><iframe title="SecSlide" width="560" height="315" src="https://www.youtube.com/embed/49lh6yPoH_Y" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></Slide>
+              <Slide index={0} className='slide'><iframe title="Slide" width="560" height="315" src="https://www.youtube.com/embed/BryL-5A6ZEQ" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></Slide>
+              <Slide index={1} className='slide'><iframe title="SecSlide" width="560" height="315" src="https://www.youtube.com/embed/49lh6yPoH_Y" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></Slide>
             </Slider>
             <DotGroup className='dot-group' />
+            <ButtonBack className='buttonBack'> </ButtonBack>
+            <ButtonNext className='buttonNext'> </ButtonNext>  
+            </div>  
           </CarouselProvider>
         </div>
       </div>

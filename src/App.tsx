@@ -12,19 +12,25 @@ import "./App.css";
 
 interface AppState {
   onboardEnabled: boolean;
+  discordEnabled: boolean;
 }
 
 class App extends Component<any, AppState> {
-  state = {onboardEnabled: true};
+  state = {onboardEnabled: true, discordEnabled: false};
   
   constructor(props: any) {
     super(props);
     this.onboard = this.onboard.bind(this)
+    this.closeWindow = this.closeWindow.bind(this)
   }
 
   onboard() { 
     this.setState({onboardEnabled: false});
     scroll.scrollTo(20000)
+  }
+
+  closeWindow() {
+    this.setState({onboardEnabled: true, discordEnabled: true})
   }
 
   render() {
@@ -55,8 +61,10 @@ class App extends Component<any, AppState> {
           title="Join Us"
           dark={false}
           onboard={this.onboard}
+          closeWindow={this.closeWindow}
           id="section5"
           onboardEnabled={this.state.onboardEnabled}
+          discordEnabled={this.state.discordEnabled}
         />
       </div>
     );

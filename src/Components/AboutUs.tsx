@@ -40,8 +40,8 @@ export default class AboutUs extends Component<AboutUsProps, AboutUsState> {
               <Slide index={3}>On the ecological level— We are creating a revolutionary, visionary “vehicle" of big production which will generate and bring though it Divine’s abundance. We will create an on going and on growing shared income to all who participate in the Enterprise with different options of involvement and participation. Eventually as we grow this could be an answer to homelessness, poverty, starvation and the need to buy into war. This would allow us to free our human minds from all the matter that does not matter any more, and live a peaceful abundant and harmonious life as we know to be our right and privilege to live as so. </Slide>
               <Slide index={4}>WE ARE NOT LEAVING ANYONE BEHIND :) <br></br> Here is how you can get started: <button onClick={this.props.onboard} className="onboarding"> Join Us </button> <br></br></Slide>
             </Slider>
-            <ButtonBack className='buttonBack'>Back</ButtonBack>
-            <ButtonNext className='buttonNext'>Next</ButtonNext>
+            <ButtonBack className='buttonBack'> </ButtonBack>
+            <ButtonNext className='buttonNext'> </ButtonNext>
               </div>
             <DotGroup className='dot-group' />
           </CarouselProvider>
