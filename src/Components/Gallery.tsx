@@ -16,7 +16,7 @@ export default class Gallery extends Component<GalleryProps, GalleryState> {
     return (
       <div className={"section" + (this.props.dark ? " section-dark" : "")}>
         <div className="section-content" id={this.props.id}>
-          <h1 style={{ color: 'white' }}>{this.props.title}</h1>
+          <h1 style={{ color: 'black' }}>{this.props.title}</h1>
           <CarouselProvider
             naturalSlideWidth={100}
             naturalSlideHeight={45}

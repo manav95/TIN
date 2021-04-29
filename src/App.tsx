@@ -1,10 +1,11 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Navbar from "./components/Navbar";
 import ContactForm from "./components/ContactForm";
 import Calendar from "./components/Calendar";
 import Gallery from "./components/Gallery"
 import AboutUs from "./components/AboutUs"
 import Message from "./components/Message"
+import PeopleTab from "./components/PeopleTab"
 import message from './message';
 import { animateScroll as scroll } from "react-scroll";
 import { hot } from "react-hot-loader";
@@ -39,30 +40,34 @@ class App extends Component<any, AppState> {
         <Navbar />
         <AboutUs
           title="About Us"
-          id="section1"
+          id="aboutUs"
           onboard={this.onboard}
-        />
-        <Calendar
-          title="Calendar"
-          dark={false}
-          id="section2"
         />
         <Message
           title="A Message from Gaia"
           subtitle={message}
-          id="section3"
+          id="message"
         />
         <Gallery
           title="Gallery"
           dark={false}
-          id="section4"
+          id="gallery"
         />
+        <PeopleTab
+          title="People"
+          id="gallery"
+        />
+        <Calendar
+          title="Events"
+          dark={false}
+          id="calendar"
+          />
         <ContactForm
           title="Join Us"
           dark={false}
           onboard={this.onboard}
           closeWindow={this.closeWindow}
-          id="section5"
+          id="joinUs"
           onboardEnabled={this.state.onboardEnabled}
           discordEnabled={this.state.discordEnabled}
         />

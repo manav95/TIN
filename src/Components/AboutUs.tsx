@@ -25,7 +25,7 @@ export default class AboutUs extends Component<AboutUsProps, AboutUsState> {
     return (
       <div className={"section"}>
         <div className="section-content" id={this.props.id}>
-          <h1 style={{ color: 'white' }}>{this.props.title}</h1>
+          <h1 style={{ color: 'black' }}>{this.props.title}</h1>
           <CarouselProvider
             naturalSlideWidth={100}
             naturalSlideHeight={20}

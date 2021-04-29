@@ -1,7 +1,6 @@
 import { Component } from "react";
 import { Link } from "react-scroll";
 import logo from "../logo.jpg";
-
 export default class Navbar extends Component {
   render() {
     return (
@@ -16,7 +15,7 @@ export default class Navbar extends Component {
             <li className="nav-item">
               <Link
                 activeClass="active"
-                to="section1"
+                to="aboutUs"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -28,7 +27,7 @@ export default class Navbar extends Component {
             <li className="nav-item">
               <Link
                 activeClass="active"
-                to="section2"
+                to="calendar"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -40,7 +39,7 @@ export default class Navbar extends Component {
             <li className="nav-item">
               <Link
                 activeClass="active"
-                to="section3"
+                to="message"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -52,7 +51,7 @@ export default class Navbar extends Component {
             <li className="nav-item">
               <Link
                 activeClass="active"
-                to="section4"
+                to="gallery"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -64,7 +63,7 @@ export default class Navbar extends Component {
             <li className="nav-item">
               <Link
                 activeClass="active"
-                to="section5"
+                to="joinUs"
                 spy={true}
                 smooth={true}
                 offset={-70}

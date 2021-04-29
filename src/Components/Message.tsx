@@ -15,7 +15,7 @@ export default class Message extends Component<MessageProps, MessageState> {
       return (
       <div className={"section"}>
         <div className="section-content" id={this.props.id}>
-          <h1 style={{color: 'white' }}>{this.props.title}</h1>
+          <h1 style={{color: 'black' }}>{this.props.title}</h1>
           <p>{this.props.subtitle}</p>
         </div>
       </div>
